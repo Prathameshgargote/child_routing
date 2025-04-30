@@ -11,7 +11,9 @@ import { ProductComponent } from './shared/components/product/product.component'
 const routes: Routes = [
   {
     path: ' ',
-    component:HomeComponent
+    // component:HomeComponent
+    redirectTo:'home',
+    pathMatch:'full'
   },
   {
     path: 'home',
