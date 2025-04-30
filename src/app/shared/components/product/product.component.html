@@ -1,0 +1,16 @@
+
+<div class="col">
+    <div class="card">
+      <div class="card-header">
+        <h1>{{ProdInfo.pName}}</h1>
+      </div>
+      <div class="card-body">
+        <p>Can Return : {{ProdInfo.canReturn}} </p>
+        <p>Product Status : {{ProdInfo.pStatus}} </p>
+      </div>
+      <div class="card-footer d-flex justify-content-between">
+        <button mat-raised-button color="primary" routerLink="edit" queryParamsHandling="preserve">Edit</button>
+        <button mat-raised-button color="warn" (click)="onRemove()">Remove</button>
+      </div>
+    </div>
+  </div>
