@@ -5,6 +5,7 @@ import { ProductService } from '../../services/product.service';
 import { Iproduct } from '../../model/product';
 import { UuidService } from '../../services/uuid.service';
 import { SnackbarService } from '../../services/snackbar.service';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-prod-form',
@@ -17,6 +18,7 @@ export class ProdFormComponent implements OnInit {
   proID!: string;
   prodObj!: Iproduct;
   disable:boolean=false
+  // ID$:new Subject
   constructor(
     private _activetroute: ActivatedRoute,
     private _productService: ProductService,
@@ -74,7 +76,7 @@ export class ProdFormComponent implements OnInit {
         `The Product ${newobj.pName} is Added Successfully !!!`
       );
 
-      this._route.navigate([`product/${newobj.PId}`], {
+      this._route.navigate([`product`,this.prodObj.PId], {
         queryParams: {
           canReturn: newobj.canReturn,
         },

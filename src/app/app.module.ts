@@ -16,6 +16,9 @@ import { RouterModule } from '@angular/router';
 import { MaterialModule } from './shared/material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { GetconfirmComponent } from './shared/components/getconfirm/getconfirm.component';
+import { FairDashComponent } from './shared/components/fair-dash/fair-dash.component';
+import { FairsComponent } from './shared/components/fairs/fairs.component';
+import { FairCardComponent } from './shared/components/fair-card/fair-card.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,9 @@ import { GetconfirmComponent } from './shared/components/getconfirm/getconfirm.c
     UserFormComponent,
     UserComponent,
     GetconfirmComponent,
+    FairDashComponent,
+    FairsComponent,
+    FairCardComponent,
    
   ],
   imports: [

@@ -7,13 +7,15 @@ import { UserComponent } from './shared/components/user/user.component';
 import { ProdDashComponent } from './shared/components/prod-dash/prod-dash.component';
 import { ProdFormComponent } from './shared/components/prod-form/prod-form.component';
 import { ProductComponent } from './shared/components/product/product.component';
+import { FairDashComponent } from './shared/components/fair-dash/fair-dash.component';
+import { FairsComponent } from './shared/components/fairs/fairs.component';
 
 const routes: Routes = [
   {
     path: ' ',
     // component:HomeComponent
-    redirectTo:'home',
-    pathMatch:'full'
+    redirectTo: 'home',
+    pathMatch: 'full',
   },
   {
     path: 'home',
@@ -22,7 +24,7 @@ const routes: Routes = [
   {
     path: 'user',
     component: UserDashComponent,
-    children:[
+    children: [
       {
         path: 'add',
         component: UserFormComponent,
@@ -35,9 +37,9 @@ const routes: Routes = [
         path: ':Id/edit',
         component: UserFormComponent,
       },
-    ]
+    ],
   },
-   {
+  {
     path: 'product',
     component: ProdDashComponent,
     children: [
@@ -52,6 +54,16 @@ const routes: Routes = [
       {
         path: ':Id/edit',
         component: ProdFormComponent,
+      },
+    ],
+  },
+  {
+    path: 'fairs',
+    component: FairDashComponent,
+    children: [
+      {
+        path: ':Id',
+        component: FairsComponent,
       },
     ],
   },

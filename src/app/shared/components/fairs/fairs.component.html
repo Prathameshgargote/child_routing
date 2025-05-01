@@ -1,0 +1,12 @@
+<figure class="banner">
+  <img class="img-fuild" [src]="Friobj.bannerUrl" [alt]="Friobj.fairName" />
+
+  <figcaption class="caption">
+    <h1 class="mb-2">{{ Friobj.fairName }}</h1>
+    <p class="mb-3">Ragistration Date : {{ (Friobj.startDate*1000)-84600000|date }}</p>
+    <p class="mb-3">Type : {{ Friobj.type }}</p>
+  </figcaption>
+</figure>
+<p [innerHTML]="Friobj.schoolDescription">
+</p>
+<p [innerHTML]="Friobj.candidateDescription"></p>
